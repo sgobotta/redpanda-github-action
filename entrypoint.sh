@@ -7,6 +7,13 @@ SCHEMA_REGISTRY_PORT=$INPUT_SCHEMA_REGISTRY_PORT
 RPC_PORT=$INPUT_RPC_PORT
 NODE_ID=$INPUT_NODE_ID
 
+echo "echoing... $KAFKA_API_PORT\n"
+echo "echoing... $ADMIN_API_PORT\n"
+echo "echoing... $PANDA_PROXY_PORT\n"
+echo "echoing... $SCHEMA_REGISTRY_PORT\n"
+echo "echoing... $RPC_PORT\n"
+echo "echoing... $NODE_ID\n"
+
 HOSTNAME=redpanda-$INPUT_NODE_ID
 
 docker_run="docker run"
