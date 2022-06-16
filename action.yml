@@ -37,7 +37,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.kafka_api }}
+    - ${{ inputs.kafka_api_port }}
     - ${{ inputs.admin_api_port }}
     - ${{ inputs.panda_proxy_port }}
     - ${{ inputs.schema_registry_port }}
