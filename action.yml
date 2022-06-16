@@ -5,6 +5,10 @@ branding:
   icon: fast-forward
   color: red
 inputs:
+  redpanda_network:
+    description: "Network for the kafka broker"
+    required: false
+    default: ""
   kafka_api_port:
     description: "Port for the Kafka API"
     required: false
@@ -37,6 +41,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.redpanda_network }}
     - ${{ inputs.kafka_api_port }}
     - ${{ inputs.admin_api_port }}
     - ${{ inputs.panda_proxy_port }}
