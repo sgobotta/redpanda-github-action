@@ -5,27 +5,27 @@ branding:
   icon: fast-forward
   color: red
 inputs:
-  kafka_api_port:
+  kafka-api-port:
     description: "Port for the Kafka API"
     required: false
     default: "9092"
-  admin_api_port:
+  admin-api-port:
     description: "Port for the Admin API"
     required: false
     default: "9644"
-  panda_proxy_port:
+  panda-proxy-port:
     description: "Port for the Panda proxy"
     required: false
     default: "8082"
-  schema_registry_port:
+  schema-registry-port:
     description: "Port for the Schema registry"
     required: false
     default: "8081"
-  rpc_port:
+  rpc-port:
     description: "Port for the RPC address"
     required: false
     default: "33145"
-  node_id:
+  node-id:
     description: "An id for the node"
     required: false
     default: "0"
@@ -37,9 +37,9 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.kafka_api }}
-    - ${{ inputs.admin_api_port }}
-    - ${{ inputs.panda_proxy_port }}
-    - ${{ inputs.schema_registry_port }}
-    - ${{ inputs.rpc_port }}
-    - ${{ inputs.node_id }}
+    - ${{ inputs.kafka-api }}
+    - ${{ inputs.admin-api-port }}
+    - ${{ inputs.panda-proxy-port }}
+    - ${{ inputs.schema-registry-port }}
+    - ${{ inputs.rpc-port }}
+    - ${{ inputs.node-id }}
