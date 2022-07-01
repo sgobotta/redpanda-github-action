@@ -17,6 +17,10 @@ inputs:
     description: "Network for the kafka broker"
     required: false
     default: "redpanda-network"
+  redpanda_seeds:
+    description: "If given, sets the --seeds parameter"
+    required: false
+    default: ""
   kafka_api_port:
     description: "Port for the Kafka API"
     required: false
